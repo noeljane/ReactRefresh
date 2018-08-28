@@ -1,0 +1,28 @@
+.container {
+    padding: 20px;
+}
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+.slider {
+    
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+   
+}
+#red {
+    background-color: red;
+
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
