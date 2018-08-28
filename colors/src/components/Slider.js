@@ -3,25 +3,33 @@ import './Slider.css';
 
 class Slider extends Component {
     state = {
+        red: 0,
+        green: 0,
+        blue: 0,
+        divStyle: {
+            color:this.red,
+        }
         
     }
     
     render(){
+        console.log("printing state")
+        console.log(this.state.divStyle)
         return (
-        <div class="container">
-            <div class="box square">This is the target square</div>
-            <div class="slidecontainer">
-            <input type="range" min="1" max="100"  class="slider" id="myRange"/>
+        <div className="container">
+            <div className="box square">This is the target square</div>
+            <div className="slidecontainer">
+            <input type="range" min="1" max="100"  className="slider" id="myRange"/>
             </div>
-            <div class="box" id="red">box</div>
-            <div class="slidecontainer">
-            <input type="range" min="1" max="100"  class="slider" id="myRange"/>
+            <div className="box" id="red">box</div>
+            <div className="slidecontainer">
+            <input type="range" min="1" max="100"  className="slider" id="myRange"/>
             </div>
-            <div class="box"id="green">box</div>
-            <div class="slidecontainer">
-            <input type="range" min="1" max="100"  class="slider" id="myRange"/>
+            <div className="box"id="green">box</div>
+            <div className="slidecontainer">
+            <input type="range" min="1" max="100"  className="slider" id="myRange"/>
             </div>
-            <div class="box" id="blue">box</div>
+            <div className="box" id="blue">box</div>
         </div> 
         )
     }
