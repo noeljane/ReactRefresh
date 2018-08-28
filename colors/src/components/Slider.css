@@ -1,23 +1,35 @@
 .container {
     padding: 20px;
+    text-align: center;
+}
+.bottomContainer {
+    padding: 20px;
+    display: flex;
 }
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 100px; /* Width of the outside container */
+    justify-content: center;
+    align-content: space-between;
+    
 }
 
 .slider {
+    width: 100px;  
     
 }
 
 .box {
     height: 100px;
     width: 100px;
+    
    
 }
 
 .square {
-    background-color: pink;
+    background-color: rgb(255, 0, 192);
 }
+
+
 #red {
     background-color: red;
 
