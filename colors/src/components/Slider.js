@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import './Slider.css';
 
 class Slider extends Component {
-    state = {
-        red: 0,
-        green: 0,
-        blue: 0,
-        backgroundColor:`rgb(${this.red, this.green, this.blue}`
-        
-        
+    constructor(props){
+        super(props)
+        this.state = {
+            red: 0,
+            green: 0,
+            blue: 0,
+            backgroundColor:`rgb(${this.red, this.green, this.blue})`
+            
+            
+        }
     }
-
+    
     changeValue (evt) {
         evt.preventDefault();
         console.log(evt.target.value)
@@ -19,6 +22,7 @@ class Slider extends Component {
     
     render(){
         console.log("printing state")
+        
         console.log(this.state.backgroundColor)
         return (
         <div className="container">

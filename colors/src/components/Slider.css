@@ -9,7 +9,8 @@
 .slidecontainer {
     width: 100px; /* Width of the outside container */
     justify-content: center;
-    align-content: space-between;
+    align-content: center;
+    margin: 20px;
     
 }
 
