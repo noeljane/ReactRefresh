@@ -7,10 +7,7 @@ class Slider extends Component {
         this.state = {
             red: 0,
             green: 0,
-            blue: 0,
-            backgroundColor: `rgb(${this.red},${this.green}, ${this.blue} )`,
-            
-            
+            blue: 0,      
         }
     }
     
@@ -37,11 +34,12 @@ class Slider extends Component {
     }
     
     render(){
-        console.log("printing blue state")
-        console.log(this.state.blue)
+        const style = {
+            background: `rgb(${this.state.red}, ${this.state.green}, ${this.state.blue}`
+        }
         return (
         <div className="container">
-            <div className="box square" >This is the target square</div>
+            <div className="box square" style={style}>This is the target square</div>
             <div className="bottomContainer">
                 
                 <div className="slidecontainer">
