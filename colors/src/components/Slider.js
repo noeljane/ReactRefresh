@@ -8,39 +8,54 @@ class Slider extends Component {
             red: 0,
             green: 0,
             blue: 0,
-            backgroundColor:`rgb(${this.red, this.green, this.blue})`
+            backgroundColor: `rgb(${this.red},${this.green}, ${this.blue} )`,
             
             
         }
     }
     
-    changeValue (evt) {
+    changeValueRed (evt) {
         evt.preventDefault();
-        console.log(evt.target.value)
-        console.log("I'm running changeValue function.")
+        this.setState ({
+            red: evt.target.value
+        })
+
     };
+
+    changeValueGreen(evt){
+        evt.preventDefault();
+        this.setState ({
+            green: evt.target.value   
+        })
+    }
+
+    changeValueBlue(evt){
+        evt.preventDefault();
+        this.setState ({
+            blue: evt.target.value   
+        })
+    }
     
     render(){
-        console.log("printing state")
-        
-        console.log(this.state.backgroundColor)
+        console.log("printing blue state")
+        console.log(this.state.blue)
         return (
         <div className="container">
-            <div className="box square" style={this.state.divStyle}>This is the target square</div>
+            <div className="box square" >This is the target square</div>
             <div className="bottomContainer">
                 
                 <div className="slidecontainer">
-                    <input type="range" min="0" max="255"  className="slider" id="myRange" onChange={this.changeValue.bind(this)}/>
+                    <input type="range" min="0" max="255"  className="slider" id="myRange" onChange={this.changeValueRed.bind(this)}/>
                     <div className="box" id="red">box</div>
                 </div>
                 
                 <div className="slidecontainer">
-                    <input type="range" min="0" max="255"  className="slider" id="myRange" onChange={this.changeValue.bind(this)}/>
+                    <input type="range" min="0" max="255"  className="slider" id="myRange" onChange={this.changeValueGreen.bind(this)}/> 
                     <div className="box"id="green">box</div>
                 </div>
                 
                 <div className="slidecontainer">
-                    <input type="range" min="1" max="255"  className="slider" id="myRange" onChange={this.changeValue.bind(this)}/>
+                    <input type="range" min="1" max="255"  className="slider" id="myRange" onChange={this.changeValueBlue.bind(this)}/>
                     <div className="box" id="blue">box</div>
                 </div>
                 
